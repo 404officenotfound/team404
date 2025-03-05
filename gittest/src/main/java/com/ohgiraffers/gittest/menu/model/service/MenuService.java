@@ -1,6 +1,7 @@
 package com.ohgiraffers.gittest.menu.model.service;
 
 import com.ohgiraffers.gittest.menu.model.dao.MenuMapper;
+import com.ohgiraffers.gittest.menu.model.dto.MenuDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,5 +16,8 @@ public class MenuService {
         this.menuMapper = menuMapper;
     }
 
+    public MenuDTO findMenuByCode(int code) {
+        return menuMapper.findMenuByCode(code);
+    }
 
 }
